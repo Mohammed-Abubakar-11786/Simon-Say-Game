@@ -7,13 +7,13 @@ let started = false;
 let level = 0;
 initiat();
 function initiat(){
-    document.addEventListener("keypress",function(event){
-        if(started==false){
-            console.log("Game Started");
-            started =true;
-            levelup();
-        }
-    });
+   setTimeout(()=>{
+    if(started==false){
+        console.log("Game Started");
+        started =true;
+        levelup();
+    }
+   },2000)
 }
 
 let h2 = document.querySelector("h2");
@@ -41,7 +41,7 @@ function chekAns(indx){
                 max=level;
             }
             
-        h2.innerHTML = "Wrong Sequence! <b>Your Score was "+level+"<b> <br>Press any key to try again";
+        h2.innerHTML = "Wrong Sequence! <b>Your Score was "+level+"<b> <br>Game Getting started in 2s";
             
         let li = document.createElement("h4");
         
